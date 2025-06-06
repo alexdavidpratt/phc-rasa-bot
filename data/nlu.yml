@@ -1,0 +1,77 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - catch you later
+
+- intent: ask_about_company
+  examples: |
+    - Tell me about Pratt Holdings and Consultancy
+    - What is PHC?
+    - Can you explain what PHC does?
+
+- intent: ask_services
+  examples: |
+    - What services do you offer?
+    - List your services
+    - What does PHC provide?
+
+- intent: ask_founders
+  examples: |
+    - Who founded PHC?
+    - Tell me about the founders
+    - Who are the key people in PHC?
+
+- intent: ask_target_market
+  examples: |
+    - Who is your target audience?
+    - Who are your clients?
+    - What market does PHC focus on?
+
+- intent: ask_vision
+  examples: |
+    - What is your vision?
+    - Share PHC's vision
+    - What's your long-term goal?
+
+- intent: ask_mission
+  examples: |
+    - What's your mission?
+    - What is PHC trying to achieve?
+    - Describe your mission statement
+
+- intent: ask_contact
+  examples: |
+    - How can I contact PHC?
+    - Where can I find more info?
+    - What's your website?
+
+- intent: ask_financials
+  examples: |
+    - Tell me about your financials
+    - How does PHC make money?
+    - What's your business model?
+
+- intent: provide_info
+  examples: |
+    - I want to submit my info
+    - I'd like to share my contact details
+    - My email is 
+
+- intent: ask_whoareyou
+  examples: |
+    - Are you a bot?
+    - Who created you?
+    - Are you a human? 

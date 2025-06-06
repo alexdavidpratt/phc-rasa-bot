@@ -1,0 +1,62 @@
+version: "3.1"
+
+stories:
+- story: greet and ask about company
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_about_company
+    - action: utter_about_company
+
+- story: ask for services
+  steps:
+    - intent: ask_services
+    - action: utter_services
+
+- story: ask about founders
+  steps:
+    - intent: ask_founders
+    - action: utter_founders
+
+- story: ask about target market
+  steps:
+    - intent: ask_target_market
+    - action: utter_target_market
+
+- story: ask vision and mission
+  steps:
+    - intent: ask_vision
+    - action: utter_vision
+    - intent: ask_mission
+    - action: utter_mission
+
+- story: ask for contact
+  steps:
+    - intent: ask_contact
+    - action: utter_contact
+
+- story: ask financials
+  steps:
+    - intent: ask_financials
+    - action: utter_financials
+
+- story: goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: collect user info
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: provide_info
+    - action: user_info_form
+    - active_loop: user_info_form
+    - active_loop: null
+    - action: utter_thank_you
+
+
+- story: ask who are you
+  steps:
+    - intent: ask_whoareyou   
+    - action: utter_iambot

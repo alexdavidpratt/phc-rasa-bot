@@ -1,0 +1,91 @@
+version: "3.1"
+
+slots:
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+
+  email:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+
+
+forms:
+  user_info_form:
+    required_slots:
+      - name
+      - email
+
+intents:
+  - greet
+  - goodbye
+  - ask_about_company
+  - ask_services
+  - ask_founders
+  - ask_target_market
+  - ask_vision
+  - ask_mission
+  - ask_contact
+  - ask_financials
+  - provide_info
+  - ask_whoareyou
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you with information about Pratt Holdings and Consultancy?"
+
+  utter_goodbye:
+    - text: "Goodbye! Feel free to ask anytime about PHC."
+
+  utter_about_company:
+    - text: "Pratt Holdings and Consultancy (PHC) is a dynamic holdings company that provides market research, business intelligence, and investment consultancy, primarily targeting the Gambian diaspora."
+
+  utter_services:
+    - text: |
+        PHC offers a variety of services including:
+        - Market research and intelligence
+        - Investment guidance and asset management
+        - Executive coaching and consultancy
+        - Venture creation
+        - Business formalization, valuation, risk assessment
+        - Networking and corporate award events
+
+  utter_founders:
+    - text: |
+        PHC was founded by Alex David Pratt and Jordan Bernad.
+        - Alex serves as the CEO with over 6 years of entrepreneurial experience.
+        - Jordan is the CTO, with a background in business and computer science.
+
+  utter_target_market:
+    - text: |
+        PHC primarily targets the Gambian diaspora (approx. 200,000 people), and plans to expand into Sierra Leone and across Africa.
+
+  utter_vision:
+    - text: "Our vision is to be the leading Pan-African holdings and consultancy firm, empowering informed investment and impactful business growth."
+
+  utter_mission:
+    - text: |
+        PHC’s mission is to generate actionable insights, provide tailored investment solutions, and deliver expert consultancy services to help stakeholders achieve their goals.
+
+  utter_contact:
+    - text: "You can find out more by visiting [www.prattholdings.co](http://www.prattholdings.co). or following @prattholdings on X, LinkedIn or Facebook!"
+
+  utter_financials:
+    - text: |
+        PHC's financial model includes revenue from subscriptions, consultancy, events, venture income, and asset management. Initial funding includes D500,000 from investors, with projected break-even in about 13 months.
+  utter_ask_name:
+    - text: "What's your name?"
+  utter_ask_email:
+    - text: "What's your email address?"
+  utter_thank_you:
+    - text: "Thanks {name}, we've noted your email: {email}."
+  utter_iambot:
+    - text: "I am PHC bot, created by Fortizo Technologies"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
